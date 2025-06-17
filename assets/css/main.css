@@ -835,7 +835,8 @@ body {
 .screen-captions {
     opacity: 0;
     transition: opacity 0.3s ease;
-    width: 280px;
+    width: 210px;  /* 75% of 280px */
+    margin: 0 auto;
 }
 
 .phone-frame:hover ~ .screen-captions {
@@ -846,7 +847,7 @@ body {
     opacity: 0;
     transition: all 0.5s ease;
     color: white;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.5;
     background: var(--secondary-color);
@@ -857,7 +858,47 @@ body {
     box-shadow: 0 4px 12px rgba(12, 34, 78, 0.1);
     backdrop-filter: blur(8px);
     transform: translateY(10px);
-    text-align: center;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.screen-caption i {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(255,255,255,0.4) 0%, 
+        rgba(255,255,255,0.2) 25%,
+        rgba(255,255,255,0.1) 50%,
+        rgba(255,255,255,0.2) 75%,
+        rgba(255,255,255,0.4) 100%
+    );
+    border-radius: 50%;
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.2),
+        inset 0 1px 2px rgba(255,255,255,0.3);
+    position: relative;
+    margin-right: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.screen-caption i::after {
+    display: none;
+}
+
+@keyframes iconShine {
+    0% {
+        transform: translateX(-200%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
 }
 
 .screen-caption.active {
@@ -889,7 +930,7 @@ body {
     }
     
     .screen-captions {
-        width: 240px;
+        width: 180px;  /* 75% of 240px */
     }
     
     .hero {
@@ -958,7 +999,7 @@ body {
     }
     
     .screen-captions {
-        width: 200px;
+        width: 150px;  /* 75% of 200px */
     }
     
     .phone-notch {
