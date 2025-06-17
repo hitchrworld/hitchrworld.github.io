@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="{{ '/' | relative_url }}" class="logo">
+                    <img src="{{ '/assets/images/hitchr-dark.svg' | relative_url }}" alt="Hitchr Logo" class="logo-image">
+                </a>
+                <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="mobile-menu">
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                    <li><a href="{{ '/partners' | relative_url }}">Partners</a></li>
+                    <li><a href="{{ '/team' | relative_url }}">Meet the Hitchrs</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="{{ '/assets/images/hitchr.svg' | relative_url }}" alt="Hitchr Logo" class="footer-logo">
+                    <p>Your trusted ride-sharing platform</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com/hitchr" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        Follow us on Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ site.time | date: '%Y' }} Hitchr. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ '/assets/js/slideshow.js' | relative_url }}"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('.nav-links');
+      burger.addEventListener('click', function() {
+        nav.classList.toggle('open');
+        burger.classList.toggle('open');
+        burger.setAttribute('aria-expanded', nav.classList.contains('open'));
+      });
+    });
+    </script>
+
+    <!-- Download Modal -->
+    <div id="download-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2>Ok, you caught us!</h2>
+        <p>We're not quite ready for you to download Hitchr. But you can join the waiting list to be the first to know when we make it available.</p>
+        <form id="waitlist-form" class="modal-form">
+          <input type="email" id="waitlist-email" name="email" placeholder="Your email address" required />
+          <button type="submit" class="cta-button">Join the waiting list</button>
+        </form>
+        <div id="waitlist-success" class="modal-success" style="display:none;">Thank you for joining the waiting list!</div>
+      </div>
+    </div>
+    <!-- End Download Modal -->
+    <script src="{{ '/assets/js/modal.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/typewriter.js' | relative_url }}"></script>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2>Type your email address in below to join our waiting list</h2>
+        <div class="waitlist-embed" style="text-align:center;">
+          <iframe src="https://hitchr.substack.com/embed" width="380" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- End Waitlist Modal -->
+</body>
+</html> 
