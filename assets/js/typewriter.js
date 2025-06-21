@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
   const el = document.getElementById('hero-typewriter');
   if (!el) return;
-  const text = 'Join the\nhitchhiking\nrevolution.';
+  
+  const headlines = [
+    'Join the\nhitchhiking\nrevolution.',
+    'Hitchhiking,\nreimagined for\ntoday.',
+    'Every journey\nstarts with a\nthumb.',
+    'Less traffic.\nMore trust.\nLet\'s ride.'
+  ];
+  
+  let currentIndex = 0;
 
   function typeWriterEffect(str, callback) {
     el.innerHTML = '';
@@ -16,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         i++;
         setTimeout(type, 60);
       } else if (callback) {
-        setTimeout(callback, 1000);
+        setTimeout(callback, 2000);
       }
     }
     type();
@@ -38,15 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
     del();
   }
 
-  function loop() {
-    typeWriterEffect(text, function() {
+  function showNextHeadline() {
+    const currentText = headlines[currentIndex];
+    
+    typeWriterEffect(currentText, function() {
       setTimeout(function() {
         deleteEffect(function() {
-          setTimeout(loop, 400);
+          currentIndex = (currentIndex + 1) % headlines.length;
+          setTimeout(showNextHeadline, 400);
         });
-      }, 2500);
+      }, 2000);
     });
   }
 
-  loop();
+  // Start the rotation
+  showNextHeadline();
 }); 

@@ -82,11 +82,9 @@
         <button class="modal-close" aria-label="Close modal">&times;</button>
         <h2>Ok, you caught us!</h2>
         <p>We're not quite ready for you to download Hitchr. But you can join the waiting list to be the first to know when we make it available.</p>
-        <form id="waitlist-form" class="modal-form">
-          <input type="email" id="waitlist-email" name="email" placeholder="Your email address" required />
-          <button type="submit" class="cta-button">Join the waiting list</button>
-        </form>
-        <div id="waitlist-success" class="modal-success" style="display:none;">Thank you for joining the waiting list!</div>
+        <div class="waitlist-embed" style="text-align:center;">
+          <iframe src="https://hitchr.substack.com/embed" width="380" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
     </div>
     <!-- End Download Modal -->
@@ -98,7 +96,8 @@
     <div id="waitlist-modal" class="modal" style="display:none;">
       <div class="modal-content">
         <button class="modal-close" aria-label="Close modal">&times;</button>
-        <h2>Type your email address in below to join our waiting list</h2>
+        <h2>Join the waiting list</h2>
+        <p>Type your email address below to be the first to know when Hitchr is available.</p>
         <div class="waitlist-embed" style="text-align:center;">
           <iframe src="https://hitchr.substack.com/embed" width="380" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
         </div>

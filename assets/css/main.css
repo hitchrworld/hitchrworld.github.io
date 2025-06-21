@@ -380,71 +380,216 @@ h2:hover::after {
     margin-bottom: 2rem;
 }
 
-/* Partners Page */
+/* Partners Page Styles */
+.partners-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #fff9b3 100%);
+    padding: 8rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.partners-hero::before {
+    display: none;
+}
+
+.partners-hero-content {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.partners-hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.partners-hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.partners-hero-description {
+    margin-bottom: 2.5rem;
+}
+
+.partners-hero-description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.partners-cta-text {
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    opacity: 1 !important;
+}
+
+.partners-hero-cta {
+    margin-top: 2rem;
+}
+
+/* Partners Showcase */
+.partners-showcase {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 .partner-card {
     background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.partner-card:hover::before {
+    transform: scaleX(1);
+}
+
+.partner-card-header {
+    padding: 2rem 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-logo-container {
+    flex: 1;
     text-align: center;
 }
 
-.partner-cta {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 700;
-    transition: transform 0.3s ease;
+.partner-logo {
+    max-width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
 }
 
-.partner-cta:hover {
-    transform: translateY(-2px);
+.partner-card:hover .partner-logo {
+    opacity: 0.8;
+}
+
+/* Special handling for Honest Days Work logo */
+img[src*="cropped-an-honest-days-work-logo.png"] {
+    filter: invert(1);
+}
+
+.partner-card-content {
+    padding: 0 2rem 2rem;
+}
+
+.partner-card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.partner-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.partner-card-footer {
+    padding: 1.5rem 2rem 2rem;
+    border-top: 1px solid #f0f0f0;
 }
 
 .partner-links {
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1rem;
+    gap: 0.75rem;
 }
 
-.partner-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f5f7fa;
-    color: var(--secondary-color);
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 6px rgba(12,34,78,0.06);
-    font-size: 1.2rem;
-    text-decoration: none;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .partners-hero-text h1 {
+        font-size: 3rem;
+    }
 }
 
-.partner-links a:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    box-shadow: 0 4px 12px rgba(12,34,78,0.12);
+@media (max-width: 768px) {
+    .partners-hero {
+        padding: 6rem 0 4rem;
+    }
+    
+    .partners-hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .partners-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .partner-card-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-.partner-links svg {
-    width: 22px;
-    height: 22px;
-    stroke: currentColor;
-    display: block;
+@media (max-width: 480px) {
+    .partners-hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .partner-card {
+        margin: 0 1rem;
+    }
+    
+    .partner-card-header,
+    .partner-card-content,
+    .partner-card-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
 /* Team Page */
@@ -1702,7 +1847,7 @@ h2:hover::after {
 }
 
 img[src*="cropped-an-honest-days-work-logo.png"] {
-  filter: invert(1);
+  filter: grayscale(0.3) invert(1);
 }
 
 .waitlist-embed {
