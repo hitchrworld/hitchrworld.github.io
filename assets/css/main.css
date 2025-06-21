@@ -666,7 +666,6 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 
 .co-founder {
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    border: 2px solid var(--primary-color);
     transform: scale(1.05);
 }
 
@@ -940,66 +939,132 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 }
 
 /* Contact Page */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin: 3rem 0;
+.contact-content {
+    padding: 6rem 0;
+    background: #f8f9fa;
 }
 
-.contact-methods {
-    margin-top: 2rem;
+.contact-message {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.contact-method {
-    margin-bottom: 1.5rem;
-}
-
-.contact-method h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-.contact-form {
+.contact-card {
     background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 32px rgba(12, 34, 78, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group {
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(12, 34, 78, 0.12);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #fff9b3 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    box-shadow: 0 8px 24px rgba(255, 247, 101, 0.3);
+}
+
+.contact-icon i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.contact-card h2 {
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
+.contact-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.contact-link {
     color: var(--secondary-color);
-    font-weight: 700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 2px solid #eee;
-    border-radius: 4px;
-    font-family: inherit;
+.contact-link:hover {
+    color: var(--primary-color);
 }
 
-.submit-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.contact-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.submit-button:hover {
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-button.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.contact-button.instagram:hover {
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(220, 39, 67, 0.3);
+}
+
+.contact-button.email {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.contact-button.email:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(12, 34, 78, 0.2);
+}
+
+.contact-button i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
 }
 
 /* Testimonials Section */
