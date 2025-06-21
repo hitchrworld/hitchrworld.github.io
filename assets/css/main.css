@@ -60,6 +60,8 @@ h2:hover::after {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative; /* Ensure proper stacking context */
+    overflow: visible; /* Ensure buttons are visible */
 }
 
 /* Header Styles */
@@ -1069,18 +1071,67 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 4rem 0;
+    background: #f8f9fa;
+    padding-left: 2rem;
+    padding-right: 2rem; /* Add horizontal padding for button space */
+    position: relative; /* Ensure proper stacking context */
+    overflow: visible; /* Ensure buttons are visible */
 }
 
 .testimonial-carousel {
     position: relative;
     width: 100%;
-    min-height: 220px;
+    height: 350px; /* Increased from 280px to make boxes taller */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 2.5rem 0 1.5rem;
+    overflow: visible; /* Ensure buttons outside container are visible */
+    pointer-events: none; /* Allow clicks to pass through to buttons */
+}
+
+.testimonial-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(12, 34, 78, 0.12);
+    transition: all 0.3s ease;
+    z-index: 20; /* Increased z-index to ensure buttons are on top */
+    color: var(--secondary-color);
+    pointer-events: auto; /* Ensure buttons are clickable */
+}
+
+.testimonial-nav:hover {
+    background: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(12, 34, 78, 0.2);
+}
+
+.testimonial-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.testimonial-prev {
+    left: -24px;
+}
+
+.testimonial-next {
+    right: -24px;
+}
+
+.testimonial-nav i {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .testimonial-slide {
@@ -1099,14 +1150,21 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     transform: scale(0.98) translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
     z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .testimonial-slide.active {
-    display: block;
+    display: flex;
     opacity: 1;
     transform: scale(1) translateY(0);
     position: relative;
     z-index: 2;
+}
+
+.testimonial-content {
+    width: 100%;
 }
 
 .quote-mark {
@@ -1132,6 +1190,11 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     font-size: 1rem;
     color: #666;
     font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .testimonial-slide cite {
@@ -1145,6 +1208,17 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     font-size: 0.95rem;
     color: #aaa;
     margin-top: 0.2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.country-flag {
+    width: 20px;
+    height: 14px;
+    border-radius: 2px;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-left: 0.5rem;
 }
 
 .testimonial-dots {
@@ -1172,13 +1246,44 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     transform: scale(1.18);
 }
 
-@media (max-width: 600px) {
-    .testimonial-slide {
-        padding: 1.2rem 0.5rem 1.2rem;
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        height: 400px; /* Slightly taller on mobile for better readability */
+    }
+    
+    .testimonial-nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .testimonial-prev {
+        left: -20px;
+    }
+    
+    .testimonial-next {
+        right: -20px;
+    }
+    
+    .testimonial-nav i {
         font-size: 1rem;
     }
+}
+
+@media (max-width: 600px) {
+    .testimonial-slide {
+        padding: 1.5rem 1rem 1.5rem;
+    }
+    
     .quote-mark {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+    }
+    
+    .testimonial-slide blockquote p {
+        font-size: 1.1rem;
+    }
+    
+    .testimonial-nav {
+        display: none; /* Hide arrows on very small screens */
     }
 }
 
