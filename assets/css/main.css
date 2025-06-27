@@ -1041,7 +1041,7 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-button.instagram {
@@ -1057,11 +1057,40 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
 .contact-button.email {
     background: var(--secondary-color);
     color: white;
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(12, 34, 78, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-button.email::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 240%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    opacity: 0; /* hidden by default */
+}
+
+.contact-button.email:hover::before {
+    opacity: 1;
+    animation: shimmer 1.2s linear forwards;
+}
+
+@keyframes shimmer {
+    0%   { left: -120%; opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { left: 120%; opacity: 0; visibility: hidden; }
 }
 
 .contact-button.email:hover {
-    background: var(--primary-color);
-    color: var(--secondary-color);
+    background: var(--secondary-color);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(12, 34, 78, 0.2);
 }
@@ -1323,6 +1352,7 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     background: transparent;
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-button.secondary:hover {
@@ -1334,10 +1364,10 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     display: inline-block;
     padding: 1rem 2rem;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     border-radius: 30px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
     background: var(--secondary-color);
@@ -1346,44 +1376,22 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     cursor: pointer;
 }
 
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
-    transform: rotate(45deg);
-    animation: shine 3s infinite;
-    pointer-events: none;
+.cta-button.no-shimmer::before,
+.cta-button.secondary.no-shimmer::before,
+.contact-button.no-shimmer::before {
+    display:none !important;
 }
 
-@keyframes shine {
-    0% {
-        transform: translateX(-200%) rotate(45deg);
-    }
-    100% {
-        transform: translateX(100%) rotate(45deg);
-    }
+.cta-button.no-shimmer:hover::before,
+.cta-button.secondary.no-shimmer:hover::before,
+.contact-button.no-shimmer:hover::before {
+    display:none !important;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 
-        0 10px 20px rgba(12, 34, 78, 0.15),
-        0 3px 6px rgba(12, 34, 78, 0.1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background: linear-gradient(
-        135deg,
-        var(--secondary-color) 0%,
-        #1a3a7a 100%
-    );
+    box-shadow: 0 10px 20px rgba(12, 34, 78, 0.15), 0 3px 6px rgba(12, 34, 78, 0.1);
+    background: var(--secondary-color); /* keep solid colour */
 }
 
 .cta-button:active {
