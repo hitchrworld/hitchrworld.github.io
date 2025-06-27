@@ -2671,4 +2671,110 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     .stay-option {
         padding: 1.5rem;
     }
+}
+
+/* Privacy Policy Page */
+.privacy-policy-content {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.privacy-policy-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(12, 34, 78, 0.08);
+}
+
+.privacy-policy-card h2 {
+    color: var(--secondary-color);
+    margin: 2.5rem 0 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.privacy-policy-card h2:first-child {
+    margin-top: 0;
+}
+
+.privacy-policy-card h3 {
+    color: var(--secondary-color);
+    margin: 2rem 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.privacy-policy-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.privacy-policy-card ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.privacy-policy-card li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.third-party-services {
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.third-party-services li {
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.privacy-policy-card a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-policy-card a:hover {
+    color: #1a3a7a;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .privacy-policy-card {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .privacy-policy-card h2 {
+        font-size: 1.6rem;
+        margin: 2rem 0 1rem 0;
+    }
+    
+    .privacy-policy-card h3 {
+        font-size: 1.3rem;
+        margin: 1.5rem 0 0.75rem 0;
+    }
+    
+    .privacy-policy-card p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+    
+    .third-party-services {
+        padding: 1rem 1.5rem;
+        margin: 1rem 0;
+    }
 } 
