@@ -19,6 +19,7 @@ body {
     font-weight: 400;
 }
 
+/* Base H2 Styles - Unified across the site */
 h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -26,10 +27,6 @@ h2 {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a3a7a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     position: relative;
     display: inline-block;
 }
@@ -48,6 +45,28 @@ h2::after {
 
 h2:hover::after {
     width: 100%;
+}
+
+/* H2 with gradient background (for main sections) */
+h2.gradient {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a3a7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* H2 without underline (for specific contexts) */
+h2.no-underline::after {
+    display: none;
+}
+
+/* H2 with white text (for dark backgrounds) */
+h2.white {
+    color: white;
+}
+
+h2.white::after {
+    background: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -831,21 +850,8 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 
 /* Section Headers */
 .team-content h2 {
-    position: relative;
-    display: inline-block;
+    text-align: center;
     margin-bottom: 3rem;
-}
-
-.team-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary-color);
-    border-radius: 2px;
 }
 
 /* Responsive Design */
@@ -1309,43 +1315,6 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     padding: 6rem 0;
     text-align: center;
     background: var(--primary-color);
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a3a7a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    display: inline-block;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background: var(--primary-color);
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-
-h2:hover::after {
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-    }
 }
 
 .cta-buttons {
@@ -2090,16 +2059,7 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 }
 
 .about-hero-text h2 {
-    font-size: 2.5rem;
     margin-bottom: 3rem;
-    line-height: 1.3;
-    background: none;
-    -webkit-text-fill-color: initial;
-    color: var(--secondary-color);
-}
-
-.about-hero-text h2::after {
-    display: none;
 }
 
 .hero-stats {
@@ -2402,12 +2362,6 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 
 .mission-header h2 {
     color: white;
-    background: none;
-    -webkit-text-fill-color: initial;
-}
-
-.mission-header h2::after {
-    background: var(--primary-color);
 }
 
 .mission-tagline {
