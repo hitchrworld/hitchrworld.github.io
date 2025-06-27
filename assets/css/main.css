@@ -611,6 +611,36 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
+    
+    .testimonial-nav {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        bottom: -55px;
+        transform: none;
+    }
+    
+    .testimonial-nav:hover {
+        transform: none;
+    }
+    
+    .testimonial-prev {
+        left: calc(50% - 90px);
+    }
+    
+    .testimonial-next {
+        right: calc(50% - 90px);
+    }
+    
+    .testimonial-nav i {
+        font-size: 1rem;
+    }
+    
+    .testimonial-dots {
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* Team Page */
@@ -1301,18 +1331,32 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     .testimonial-nav {
         width: 40px;
         height: 40px;
+        position: absolute;
+        top: auto;
+        bottom: -60px;
+        transform: none;
+        z-index: 30;
+    }
+    
+    .testimonial-nav:hover {
+        transform: none;
     }
     
     .testimonial-prev {
-        left: -20px;
+        left: calc(50% - 110px);
     }
     
     .testimonial-next {
-        right: -20px;
+        right: calc(50% - 110px);
     }
     
     .testimonial-nav i {
         font-size: 1rem;
+    }
+    
+    .testimonial-dots {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -1330,7 +1374,34 @@ a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):
     }
     
     .testimonial-nav {
-        display: none; /* Hide arrows on very small screens */
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: auto;
+        bottom: -55px;
+        transform: none;
+        z-index: 30;
+    }
+    
+    .testimonial-nav:hover {
+        transform: none;
+    }
+    
+    .testimonial-prev {
+        left: calc(50% - 100px);
+    }
+    
+    .testimonial-next {
+        right: calc(50% - 100px);
+    }
+    
+    .testimonial-nav i {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial-dots {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 }
 
