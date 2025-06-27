@@ -944,6 +944,21 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     }
 }
 
+/* General Link Styles */
+a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):not(.testimonial-dot):not(.hitcher-icon):not(.burger) {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):not(.testimonial-dot):not(.hitcher-icon):not(.burger):hover {
+    color: #1a3a7a; /* Darker blue for better readability */
+}
+
+a:not(.cta-button):not(.contact-button):not(.nav-links a):not(.testimonial-nav):not(.testimonial-dot):not(.hitcher-icon):not(.burger):visited {
+    color: var(--secondary-color);
+}
+
 /* Contact Page */
 .contact-content {
     padding: 6rem 0;
@@ -1007,7 +1022,7 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
 }
 
 .contact-link:hover {
-    color: var(--primary-color);
+    color: #1a3a7a; /* Darker blue for better readability */
 }
 
 .contact-actions {
@@ -1026,7 +1041,6 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
 .contact-button.instagram {
