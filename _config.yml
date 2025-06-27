@@ -1,1 +1,11 @@
- 
+# Site configuration
+title: Hitchr
+description: Safe, free, social travel
+
+# Google Analytics
+google_analytics: G-0Y3620S1WB  # Replace with your actual GA4 tracking ID
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag 
