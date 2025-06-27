@@ -41,11 +41,8 @@ This site is configured to be deployed on GitHub Pages. To deploy:
 - Configuration settings can be adjusted in `_config.yml`
 
 ## Contributing
-
-1. Fork the repository
-2. Create a new branch for your feature
-3. Make your changes
-4. Submit a pull request
+- Submit an issue
+- or, submit a Pull Request
 
 ## License
 
