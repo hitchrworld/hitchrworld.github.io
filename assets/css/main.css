@@ -481,6 +481,8 @@ h2.white::after {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
+    max-width: 360px;
+    margin: 0 auto;
 }
 
 .partner-card::before {
@@ -610,6 +612,107 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     .partner-card-footer {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+    }
+}
+
+/* Credits Section Styles */
+.credits-section {
+    padding: 4rem 0;
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+}
+
+.credits-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.credits-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.credits-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Credit card inherits partner card styles */
+
+
+
+
+
+
+
+.credit-fallback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.credit-fallback svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* Responsive Design for Credits */
+@media (max-width: 768px) {
+    .credits-content h2 {
+        font-size: 2rem;
+    }
+    
+    .credits-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .credits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .credits-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .credit-card {
+        margin: 0 1rem;
+    }
+    
+    .credit-card-header,
+    .credit-card-content,
+    .credit-card-footer {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
     
     .testimonial-nav {
