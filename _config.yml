@@ -1,6 +1,25 @@
 # Site configuration
 title: Hitchr
-description: Safe, free, social travel
+description: Safe, free, social travel. Connect with drivers and fellow travelers for sustainable, community-driven hitchhiking experiences.
+
+# Site URL (update this to your actual domain when deployed)
+url: "https://hitchr.world"
+
+# Social Media and SEO
+author: Hitchr Team
+twitter:
+  username: hitchrworld
+  card: summary_large_image
+
+# Open Graph
+og_image: /assets/images/logo.png
+og_image_width: 1200
+og_image_height: 630
+og_image_alt: "Hitchr - Safe, free, social travel"
+
+# Additional SEO
+keywords: "hitchhiking, travel, sustainable travel, social travel, free travel, hitchhiker, rideshare, community travel"
+lang: "en"
 
 # Google Analytics
 google_analytics: G-0Y3620S1WB  # Replace with your actual GA4 tracking ID

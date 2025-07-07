@@ -6,6 +6,29 @@
     <meta name="robots" content="noindex, nofollow">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ site.og_image | absolute_url }}{% endif %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{% if page.og_image_alt %}{{ page.og_image_alt }}{% else %}{{ site.og_image_alt }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+    <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ site.og_image | absolute_url }}{% endif %}">
+    {% if site.twitter.username %}
+    <meta property="twitter:creator" content="@{{ site.twitter.username }}">
+    <meta property="twitter:site" content="@{{ site.twitter.username }}">
+    {% endif %}
+    
     <!-- Google Analytics -->
     {% if site.google_analytics and site.google_analytics != 'G-XXXXXXXXXX' %}
     <!-- Google tag (gtag.js) -->
