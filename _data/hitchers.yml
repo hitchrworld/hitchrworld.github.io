@@ -154,6 +154,14 @@
       url: "https://www.instagram.com/pim_hugo/"
       icon: "instagram"
 
+- name: "Quentin Dechèvre"
+  handle: "@quentin.dechevre"
+  image: "/assets/images/team/quentin.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/quentin.dechevre/"
+      icon: "instagram"
+
 - name: "Reuben Schmitz"
   handle: "@reubenschmitz"
   image: "/assets/images/team/reuben.jpg"
