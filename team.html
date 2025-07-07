@@ -115,211 +115,23 @@ title: Meet the Team
         <!-- The Hitchers -->
         <h2>The Hitchers</h2>
         <div class="team-grid hitchers-grid">
+            {% assign sorted_hitchers = site.data.hitchers | sort: 'name' %}
+            {% for hitcher in sorted_hitchers %}
             <div class="team-member">
                 <div class="member-image">
-                    <img src="/assets/images/team/alex_berni.jpg" alt="Alex and Berni" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
+                    <img src="{{ hitcher.image }}" alt="{{ hitcher.name }}" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
                 </div>
-                <h3>Alex and Berni</h3>
-                <p class="member-handle">@hitchhikingdiary</p>
+                <h3>{{ hitcher.name }}</h3>
+                <p class="member-handle">{{ hitcher.handle }}</p>
                 <div class="member-socials">
-                    <a href="https://www.instagram.com/hitchhikingdiary/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    {% for social in hitcher.socials %}
+                    <a href="{{ social.url }}" target="_blank" aria-label="{{ social.platform }}" class="hitcher-icon">
+                        {% include social-icon.html platform=social.icon %}
+                    </a>
+                    {% endfor %}
                 </div>
             </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/alice.jpg" alt="Alice Chapman" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Alice Chapman</h3>
-                <p class="member-handle">@itsalicechapman</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/itsalicechapman" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    <a href="https://www.youtube.com/@itsalicechapman" target="_blank" aria-label="YouTube" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4" ry="4"></rect><polygon points="10 9 16 12 10 15 10 9"></polygon></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/ana.png" alt="Ana" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Ana</h3>
-                <p class="member-handle">@the_sustainable_backpacker</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/the_sustainable_backpacker/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    <a href="https://www.youtube.com/@TheSustainableBackpacker53" target="_blank" aria-label="YouTube" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4" ry="4"></rect><polygon points="10 9 16 12 10 15 10 9"></polygon></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/baltazar.jpg" alt="Baltazar Faunbäck" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Baltazar Faunbäck</h3>
-                <p class="member-handle">@faunback</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/faunback/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/baptiste.jpg" alt="Baptiste" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Baptiste</h3>
-                <p class="member-handle">@autostop.adventure</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/autostop.adventure/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    <a href="https://www.youtube.com/@autostop_adventure" target="_blank" aria-label="YouTube" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4" ry="4"></rect><polygon points="10 9 16 12 10 15 10 9"></polygon></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/cam.jpg" alt="Cam" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Cam</h3>
-                <p class="member-handle">@adventurewcam</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/adventurewcam/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/courtney.jpg" alt="Courtney" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Courtney</h3>
-                <p class="member-handle">@hitchhikercourtney</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/hitchhikercourtney/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/danventures.jpg" alt="Dan" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Dan</h3>
-                <p class="member-handle">@danventures23</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/danventures23/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/emmavanbeeck.jpg" alt="Emma Van Beeck" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Emma Van Beeck</h3>
-                <p class="member-handle">@emma_vanbeeck</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/emma_vanbeeck/reels/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    <a href="https://www.youtube.com/watch?v=xIn7Jy-salg" target="_blank" aria-label="YouTube" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4" ry="4"></rect><polygon points="10 9 16 12 10 15 10 9"></polygon></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/joestride.png" alt="Joe Stride" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Joe Stride</h3>
-                <p class="member-handle">@joestride</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/joestride/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/josef.webp" alt="Josef Koupy" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Josef Koupy</h3>
-                <p class="member-handle">@josef.koupy</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/josef.koupy/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/leonie.jpg" alt="Leonie Buchegger" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Leonie Buchegger</h3>
-                <p class="member-handle">@leonie.feliciaa</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/leonie.feliciaa/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/maiatimo.jpg" alt="Maïa et Timo" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Maïa et Timo</h3>
-                <p class="member-handle">@maiatimo.stop</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/maiatimo.stop/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/nano.jpg" alt="Nano" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Nano</h3>
-                <p class="member-handle">@nanoviajero</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/nanoviajero/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/pim.jpg" alt="Pim Hugo" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Pim Hugo</h3>
-                <p class="member-handle">@pim_hugo</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/pim_hugo/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/reuben.jpg" alt="Reuben Schmitz" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Reuben Schmitz</h3>
-                <p class="member-handle">@reubenschmitz</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/reubenschmitz/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    <a href="https://www.youtube.com/@reubenschmitz" target="_blank" aria-label="YouTube" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4" ry="4"></rect><polygon points="10 9 16 12 10 15 10 9"></polygon></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/timodejong.jpg" alt="Timo de Jong" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Timo de Jong</h3>
-                <p class="member-handle">@hitchhikertimo</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/hitchhikertimo/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/lorenza.jpg" alt="Lorenza D'Agostino" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Lorenza D'Agostino</h3>
-                <p class="member-handle">@travelorsoul</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/travelorsoul/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/jerry.jpg" alt="Jerry Ude" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Jerry Ude</h3>
-                <p class="member-handle">@jeremy.ude</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/jeremy.ude/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/assets/images/team/fabian.jpg" alt="Fabian" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';">
-                </div>
-                <h3>Fabian</h3>
-                <p class="member-handle">@thehumannature.offical</p>
-                <div class="member-socials">
-                    <a href="https://www.instagram.com/thehumannature.offical/" target="_blank" aria-label="Instagram" class="hitcher-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section> 

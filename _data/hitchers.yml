@@ -1,0 +1,174 @@
+- name: "Alex and Berni"
+  handle: "@hitchhikingdiary"
+  image: "/assets/images/team/alex_berni.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/hitchhikingdiary/"
+      icon: "instagram"
+
+- name: "Alice Chapman"
+  handle: "@itsalicechapman"
+  image: "/assets/images/team/alice.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/itsalicechapman"
+      icon: "instagram"
+    - platform: "YouTube"
+      url: "https://www.youtube.com/@itsalicechapman"
+      icon: "youtube"
+
+- name: "Ana"
+  handle: "@the_sustainable_backpacker"
+  image: "/assets/images/team/ana.png"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/the_sustainable_backpacker/"
+      icon: "instagram"
+    - platform: "YouTube"
+      url: "https://www.youtube.com/@TheSustainableBackpacker53"
+      icon: "youtube"
+
+- name: "Baltazar Faunbäck"
+  handle: "@faunback"
+  image: "/assets/images/team/baltazar.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/faunback/"
+      icon: "instagram"
+
+- name: "Baptiste"
+  handle: "@autostop.adventure"
+  image: "/assets/images/team/baptiste.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/autostop.adventure/"
+      icon: "instagram"
+    - platform: "YouTube"
+      url: "https://www.youtube.com/@autostop_adventure"
+      icon: "youtube"
+
+- name: "Cam"
+  handle: "@adventurewcam"
+  image: "/assets/images/team/cam.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/adventurewcam/"
+      icon: "instagram"
+
+- name: "Courtney"
+  handle: "@hitchhikercourtney"
+  image: "/assets/images/team/courtney.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/hitchhikercourtney/"
+      icon: "instagram"
+
+- name: "Dan"
+  handle: "@danventures23"
+  image: "/assets/images/team/danventures.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/danventures23/"
+      icon: "instagram"
+
+- name: "Emma Van Beeck"
+  handle: "@emma_vanbeeck"
+  image: "/assets/images/team/emmavanbeeck.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/emma_vanbeeck/reels/"
+      icon: "instagram"
+    - platform: "YouTube"
+      url: "https://www.youtube.com/watch?v=xIn7Jy-salg"
+      icon: "youtube"
+
+- name: "Fabian"
+  handle: "@thehumannature.offical"
+  image: "/assets/images/team/fabian.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/thehumannature.offical/"
+      icon: "instagram"
+
+- name: "Jerry Ude"
+  handle: "@jeremy.ude"
+  image: "/assets/images/team/jerry.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/jeremy.ude/"
+      icon: "instagram"
+
+- name: "Joe Stride"
+  handle: "@joestride"
+  image: "/assets/images/team/joestride.png"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/joestride/"
+      icon: "instagram"
+
+- name: "Josef Koupy"
+  handle: "@josef.koupy"
+  image: "/assets/images/team/josef.webp"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/josef.koupy/"
+      icon: "instagram"
+
+- name: "Leonie Buchegger"
+  handle: "@leonie.feliciaa"
+  image: "/assets/images/team/leonie.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/leonie.feliciaa/"
+      icon: "instagram"
+
+- name: "Lorenza D'Agostino"
+  handle: "@travelorsoul"
+  image: "/assets/images/team/lorenza.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/travelorsoul/"
+      icon: "instagram"
+
+- name: "Maïa et Timo"
+  handle: "@maiatimo.stop"
+  image: "/assets/images/team/maiatimo.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/maiatimo.stop/"
+      icon: "instagram"
+
+- name: "Nano"
+  handle: "@nanoviajero"
+  image: "/assets/images/team/nano.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/nanoviajero/"
+      icon: "instagram"
+
+- name: "Pim Hugo"
+  handle: "@pim_hugo"
+  image: "/assets/images/team/pim.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/pim_hugo/"
+      icon: "instagram"
+
+- name: "Reuben Schmitz"
+  handle: "@reubenschmitz"
+  image: "/assets/images/team/reuben.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/reubenschmitz/"
+      icon: "instagram"
+    - platform: "YouTube"
+      url: "https://www.youtube.com/@reubenschmitz"
+      icon: "youtube"
+
+- name: "Timo de Jong"
+  handle: "@hitchhikertimo"
+  image: "/assets/images/team/timodejong.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/hitchhikertimo/"
+      icon: "instagram" 
