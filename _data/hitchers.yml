@@ -138,6 +138,20 @@
       url: "https://www.instagram.com/maiatimo.stop/"
       icon: "instagram"
 
+- name: "Martha and Dora"
+  handle: "@by_landandsea"
+  image: "/assets/images/team/marthadora.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/by_landandsea/"
+      icon: "instagram"
+    - platform: "Website"
+      url: "https://www.bylandandsea.co.uk"
+      icon: "website"
+    - platform: "TikTok"
+      url: "https://www.tiktok.com/@bylandandsea"
+      icon: "tiktok"
+
 - name: "Nano"
   handle: "@nanoviajero"
   image: "/assets/images/team/nano.jpg"
