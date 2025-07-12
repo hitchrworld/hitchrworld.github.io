@@ -193,4 +193,32 @@
   socials:
     - platform: "Instagram"
       url: "https://www.instagram.com/hitchhikertimo/"
-      icon: "instagram" 
+      icon: "instagram"
+
+- name: "Robin Batard"
+  handle: "@robinbatard"
+  image: "/assets/images/team/robin.jpeg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/robinbatard/"
+      icon: "instagram"
+    - platform: "Polarsteps"
+      url: "https://www.polarsteps.com/RobinBatard/7603533-rob-in-the-road"
+      icon: "polarsteps"
+    - platform: "Blog"
+      url: "https://robinbatard.wordpress.com/"
+      icon: "website"
+
+- name: "Jakob Illek"
+  handle: "@hitchhiking_dove"
+  image: "/assets/images/team/jakob.jpg"
+  socials:
+    - platform: "Instagram"
+      url: "https://www.instagram.com/hitchhiking_dove/"
+      icon: "instagram"
+    - platform: "YouTube"
+      url: "https://www.youtube.com/@dovepodcast"
+      icon: "youtube"
+    - platform: "Website"
+      url: "https://www.illek.at/hitch-hiking-dove-instagram-stories/"
+      icon: "website" 
