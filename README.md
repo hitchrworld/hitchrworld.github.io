@@ -4,6 +4,38 @@ This is the official website for Hitchr, built with Jekyll and designed to be ho
 
 ## Local Development
 
+### Option 1: Docker (Recommended)
+
+The easiest way to run the site locally without installing Ruby/Jekyll on your machine:
+
+#### Quick Start
+```bash
+docker run --rm -it -p 4000:4000 -v "%cd%":/srv/jekyll jekyll/jekyll:latest jekyll serve --host 0.0.0.0
+```
+
+#### Using Docker Compose (Best for Development)
+```bash
+docker-compose up
+```
+
+This provides:
+- Live reload (changes auto-refresh the browser)
+- Dependency caching for faster startup
+- No local Ruby/Jekyll installation required
+
+**Access the site**: Open your browser and go to `http://127.0.0.1:4000`
+
+> **Note**: Use `127.0.0.1:4000` instead of `localhost:4000` if you're on Windows and localhost doesn't work.
+
+#### Stop the Development Server
+```bash
+docker-compose down
+```
+
+### Option 2: Native Ruby/Jekyll
+
+If you prefer to install Jekyll locally:
+
 1. Make sure you have Ruby installed (version 2.7.0 or higher)
 2. Install Jekyll and Bundler:
    ```bash

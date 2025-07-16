@@ -151,6 +151,18 @@ h2.white::after {
     text-shadow: none;
 }
 
+/* Active navigation state */
+.nav-links a.active {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.nav-links a.active::after {
+    opacity: 1;
+    transform: scaleX(1);
+    background: var(--secondary-color);
+}
+
 /* Hero Section */
 .hero {
     background: var(--primary-color);

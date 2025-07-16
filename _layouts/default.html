@@ -79,12 +79,12 @@
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-links" id="mobile-menu">
-                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                    <li><a href="{{ '/about' | relative_url }}">Our Story</a></li>
-                    <li><a href="{{ '/partners' | relative_url }}">Partners</a></li>
-                    <li><a href="{{ '/team' | relative_url }}">The team</a></li>
+                    <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+                    <li><a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>Our Story</a></li>
+                    <li><a href="{{ '/partners' | relative_url }}" {% if page.url contains '/partners' %}class="active"{% endif %}>Partners</a></li>
+                    <li><a href="{{ '/team' | relative_url }}" {% if page.url contains '/team' %}class="active"{% endif %}>The Team</a></li>
                     <li><a href="https://hitchr.substack.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                    <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a></li>
                 </ul>
             </nav>
         </div>
