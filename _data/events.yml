@@ -1,0 +1,52 @@
+- title: "Hitch with Hitchr | January"
+  date: "2026-01-03T08:00:00"
+  location: "London Waterloo Station"
+  city: "London, UK"
+  description: "Join us for a monthly hitchhiking adventure! Meet fellow hitchhikers, share stories, and embark on an exciting journey together from London Waterloo Station."
+  url: "https://www.eventbrite.co.uk/e/1978832162266?aff=oddtdtcreator"
+  original_price: "£25"
+  promo_price: "£6.25"
+  discount_percent: 75
+
+- title: "Hitch with Hitchr | February"
+  date: "2026-02-07T08:00:00"
+  location: "London Waterloo Station"
+  city: "London, UK"
+  description: "Join us for a monthly hitchhiking adventure! Meet fellow hitchhikers, share stories, and embark on an exciting journey together from London Waterloo Station."
+  url: "https://www.eventbrite.co.uk/e/1978883574040?aff=oddtdtcreator"
+  original_price: "£25"
+  promo_price: "£6.25"
+  discount_percent: 75
+
+- title: "Hitch with Hitchr | March"
+  date: "2026-03-28T08:00:00"
+  location: "London Waterloo Station"
+  city: "London, UK"
+  description: "Join us for a monthly hitchhiking adventure! Meet fellow hitchhikers, share stories, and embark on an exciting journey together from London Waterloo Station."
+  url: "https://www.eventbrite.co.uk/e/1978883680358?aff=oddtdtcreator"
+  original_price: "£25"
+  promo_price: "£6.25"
+  discount_percent: 75
+  not_on_sale: true
+
+- title: "Hitch with Hitchr | April"
+  date: "2026-04-25T08:00:00"
+  location: "London Waterloo Station"
+  city: "London, UK"
+  description: "Join us for a monthly hitchhiking adventure! Meet fellow hitchhikers, share stories, and embark on an exciting journey together from London Waterloo Station."
+  url: "https://www.eventbrite.co.uk/e/1978883797709?aff=oddtdtcreator"
+  original_price: "£25"
+  promo_price: "£6.25"
+  discount_percent: 75
+  not_on_sale: true
+
+- title: "Hitch with Hitchr | May"
+  date: "2026-05-23T08:00:00"
+  location: "London Waterloo Station"
+  city: "London, UK"
+  description: "Join us for a monthly hitchhiking adventure! Meet fellow hitchhikers, share stories, and embark on an exciting journey together from London Waterloo Station."
+  url: "https://www.eventbrite.co.uk/e/1978883831811?aff=oddtdtcreator"
+  original_price: "£25"
+  promo_price: "£6.25"
+  discount_percent: 75
+  not_on_sale: true

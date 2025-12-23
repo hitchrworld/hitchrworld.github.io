@@ -1,0 +1,58 @@
+---
+layout: default
+title: Events
+description: Join us at upcoming Hitchr events and connect with the hitchhiking community. Discover workshops, meetups, and community gatherings near you.
+og_image: /assets/images/logo.png
+og_image_alt: "Hitchr Events - Join the hitchhiking community"
+keywords: "hitchr events, hitchhiking events, travel events, community meetups, hitchhiking workshops"
+---
+
+<section class="page-header">
+    <div class="container">
+        <h1>Upcoming Events</h1>
+        <p class="hero-subtitle">Join the Hitchr team for our monthly hitchhiking challenges. Open to all, no experience required.</p>
+    </div>
+</section>
+
+<section class="events-section">
+    <div class="container">
+        {% if site.data.events.size > 0 %}
+            <div class="events-grid">
+                {% for event in site.data.events %}
+                    <a href="{{ event.url }}" class="event-card" target="_blank" rel="noopener noreferrer">
+                        <h3 class="event-title">{{ event.title }}</h3>
+                        
+                        <div class="event-info">
+                            <div class="event-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>{{ event.date | date: "%B %d, %Y at %I:%M %p" }}</span>
+                            </div>
+                            
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>{{ event.location }}, {{ event.city }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="event-pricing">
+                            <div class="pricing-row">
+                                <span class="event-original-price">{{ event.original_price }}</span>
+                                <span class="event-promo-price">{{ event.promo_price }}</span>
+                            </div>
+                            {% if event.discount_percent %}
+                                <span class="event-discount-badge">{{ event.discount_percent }}% OFF</span>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="event-cta">
+                            <span class="cta-button">{% if event.not_on_sale %}More Info{% else %}Book Now{% endif %}</span>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="no-events">No upcoming events at this time. Check back soon!</p>
+        {% endif %}
+    </div>
+</section>
+
