@@ -467,6 +467,12 @@ h2.white::after {
     margin-bottom: 1rem;
 }
 
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .footer-social a {
     color: white !important;
     text-decoration: none;
@@ -475,6 +481,16 @@ h2.white::after {
     gap: 0.5rem;
     opacity: 1 !important;
     font-weight: 500;
+}
+
+.footer-social a svg,
+.footer-social a i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .footer-social a:hover {
