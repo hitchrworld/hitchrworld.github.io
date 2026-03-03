@@ -3036,6 +3036,50 @@ img[src*="cropped-an-honest-days-work-logo.png"] {
     }
 }
 
+.privacy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 2rem 0;
+    font-size: 0.95rem;
+}
+
+.privacy-table thead tr {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.privacy-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+.privacy-table td {
+    padding: 0.75rem 1rem;
+    color: #555;
+    line-height: 1.6;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+}
+
+.privacy-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.privacy-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .privacy-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 /* Terms and Conditions Page */
 .terms-content {
     padding: 4rem 0;
